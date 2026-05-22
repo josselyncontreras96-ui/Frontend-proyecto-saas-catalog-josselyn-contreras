@@ -1,1 +1,1 @@
-# Frontend-proyecto-saas-catalog-josselyn-contreras
+# Stackly | Catálogo de herramientas SaaS

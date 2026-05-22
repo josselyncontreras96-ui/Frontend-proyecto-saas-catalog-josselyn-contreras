@@ -1,9 +1,14 @@
-function Header () {
-    return (
-        <header>
-            <h1>Stackly</h1>
-        </header>
-    );
+import Navbar from "./Navbar";
+
+function Header() {
+  return (
+    <header>
+      <div className="header-content container">
+        <div>Stackly</div>
+        <Navbar />
+      </div>
+    </header>
+  );
 }
 
 export default Header;

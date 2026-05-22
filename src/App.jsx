@@ -1,12 +1,21 @@
 
-import './App.css'
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 function App() {
 
 
   return (
     <>
-    <h1>Stackly</h1>
+    <header></header>
+    <nav></nav>
+    <main>
+      <h1>Stackly</h1>
+    </main>
+    <section></section>
+    <footer></footer>
     </>
   );
    

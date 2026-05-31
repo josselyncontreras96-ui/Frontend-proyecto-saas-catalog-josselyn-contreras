@@ -9,8 +9,8 @@ function CatalogPage() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [sortBy, setSortBy] = useState("default");
 
-  const { filteredTools } = useFilteredTools(tools, search, selectedCategory, sortBy);
-  const hasResults = filteredTools.length > 0;
+  const { sortedTools } = useFilteredTools(tools, search, selectedCategory, sortBy);
+  const hasResults = sortedTools.length > 0;
   const categories = ["Todos", ...new Set(tools.map((tool) => tool.category))];
 
   return (
@@ -31,7 +31,7 @@ function CatalogPage() {
             onSortChange={setSortBy}
           />
           {hasResults ? (
-            <ToolList tools={filteredTools} />
+            <ToolList tools={sortedTools} />
           ) : (
             <p className="empty-message">
               No encontramos resultados para tu búsqueda

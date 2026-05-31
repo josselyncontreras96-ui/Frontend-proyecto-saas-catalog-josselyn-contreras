@@ -8,30 +8,41 @@ function ToolFilters({
   onSortChange,
 }) {
   return (
-    <div className="filters">
-      <input
-        type="text"
-        placeholder="Buscar herramienta..."
-        value={search}
-        onChange={(e) => onSearchChange(e.target.value)}
-      />
+    <div className="tool-filters">
+      <div>
+        <label className="search-label" htmlFor="search">
+          Buscar por nombre o descripción:
+        </label>
+        <input
+          className="search-input"
+          placeholder="Buscar por nombre o descripción..."
+          type="search"
+          name="search"
+          id="search"
+          value={search}
+          onChange={(event) => onSearchChange(event.target.value)}
+        />
+      </div>
       <select
+        className="filter-select"
         value={selectedCategory}
-        onChange={(e) => onCategoryChange(e.target.value)}
+        onChange={(event) => onCategoryChange(event.target.value)}
       >
-        {categories.map((cat) => (
-          <option key={cat} value={cat}>
-            {cat}
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
           </option>
         ))}
       </select>
       <select
+        className="filter-select"
         value={sortBy}
-        onChange={(e) => onSortChange(e.target.value)}
+        onChange={(event) => onSortChange(event.target.value)}
       >
-        <option value="default">Ordenar por</option>
+        <option value="default">Orden por defecto</option>
+        <option value="az">A-Z</option>
         <option value="rating">Mejor valoradas</option>
-        <option value="name">Nombre A-Z</option>
+        <option value="pricing">Por precio</option>
       </select>
     </div>
   );

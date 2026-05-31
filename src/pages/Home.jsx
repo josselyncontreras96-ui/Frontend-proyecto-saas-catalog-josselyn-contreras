@@ -1,4 +1,4 @@
-import tools from "../data/tools";
+import { tools } from "../data/tools";
 import ToolList from "../components/ToolList";
 import { Link } from "react-router-dom";
 

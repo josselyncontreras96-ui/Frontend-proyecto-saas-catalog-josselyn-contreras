@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import tools from "../data/tools";
+import { tools } from "../data/tools";
 
 function ToolDetailPage() {
   const { id } = useParams();

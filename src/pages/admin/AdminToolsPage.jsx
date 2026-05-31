@@ -1,4 +1,4 @@
-import tools from "../../data/tools";
+import { tools } from "../../data/tools";
 
 function AdminToolsPage() {
   return (

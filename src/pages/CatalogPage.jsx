@@ -1,5 +1,5 @@
 import { useState } from "react";
-import tools from "../data/tools";
+import { tools } from "../data/tools";
 import ToolList from "../components/ToolList";
 import ToolFilters from "../components/ToolFilters";
 import useFilteredTools from "../hooks/useFilteredTools";

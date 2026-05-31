@@ -6,13 +6,13 @@ function AdminLayout() {
   return (
     <>
       <Header />
-      <main>
-        <div>
-          <div>
+      <main className="admin-page">
+        <div className="container">
+          <div className="admin-header">
             <h1>Panel Administración</h1>
             <p>Gestiona el contenido del catálogo</p>
           </div>
-          <nav>
+          <nav className="admin-nav">
             <Link to="/admin/tools">Herramientas</Link>
             <Link to="/">Ver sitio público</Link>
           </nav>

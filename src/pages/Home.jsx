@@ -10,6 +10,7 @@ function Home() {
     <main>
       <section className="hero">
         <div className="container">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1100&h=200&fit=crop" />
           <span className="hero-label">Proyecto final</span>
           <h1>Catálogo de herramientas SaaS</h1>
           <p>

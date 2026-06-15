@@ -340,3 +340,56 @@ nav a.active {
   font-weight: bold;
   border-bottom: 2px solid #60a5fa;
 }
+.search-box {
+  position: relative;
+}
+
+.search-box-input {
+  padding: 8px 12px;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  background-color: #020617;
+  color: #f9fafb;
+  font-size: 0.9rem;
+  width: 200px;
+}
+
+.search-box-results {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 260px;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  z-index: 100;
+  margin-top: 4px;
+}
+
+.search-box-result {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-bottom: 1px solid #374151;
+  cursor: pointer;
+}
+
+.search-box-result:hover {
+  background-color: #374151;
+}
+
+.search-box-result strong {
+  font-size: 13px;
+  color: #f9fafb;
+}
+
+.search-box-result span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.search-box-empty {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #9ca3af;
+}

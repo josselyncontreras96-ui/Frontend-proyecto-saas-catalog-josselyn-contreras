@@ -1,5 +1,6 @@
 import { tools } from "../data/tools";
 import ToolList from "../components/ToolList";
+import ToolCarousel from "../components/ToolCarousel";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -10,7 +11,7 @@ function Home() {
     <main>
       <section className="hero">
         <div className="container">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1100&h=200&fit=crop" />
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1100&h=200&fit=crop" alt="Stackly hero" />
           <span className="hero-label">Proyecto final</span>
           <h1>Catálogo de herramientas SaaS</h1>
           <p>
@@ -25,8 +26,7 @@ function Home() {
 
       <section className="featured-section">
         <div className="container">
-          <h2>Herramientas destacadas</h2>
-          <ToolList tools={featuredTools} />
+          <ToolCarousel tools={featuredTools} />
         </div>
       </section>
 

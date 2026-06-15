@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import SearchBox from "./SearchBox";
 
 function Header() {
   return (
@@ -8,6 +9,7 @@ function Header() {
           <span className="logo">Stackly</span>
         </div>
         <Navbar />
+        <SearchBox />
       </div>
     </header>
   );

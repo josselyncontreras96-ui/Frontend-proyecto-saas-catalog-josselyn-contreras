@@ -28,10 +28,10 @@ function AdminToolsPage() {
       <div className="admin-list">
         {tools.map((tool) => (
           <article className="admin-list-item" key={tool.id}>
+            <img src={tool.image} alt={tool.name} />
             <div>
               <h3>{tool.name}</h3>
               <p>{tool.category} • {tool.pricing}</p>
-              <p>{tool.description}</p>
             </div>
           </article>
         ))}

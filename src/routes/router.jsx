@@ -7,6 +7,9 @@ import ToolDetailPage from "../pages/ToolDetailPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import DashboardPage from "../pages/admin/DashboardPage";
 import AdminToolsPage from "../pages/admin/AdminToolsPage";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
+import adminLoader from "../loaders/adminLoader";
 
 export const router = createBrowserRouter([
   {
@@ -26,11 +29,20 @@ export const router = createBrowserRouter([
         path: "catalog/:id",
         element: <ToolDetailPage />,
       },
+      {
+        path: "auth/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "auth/register",
+        element: <RegisterPage />,
+      },
     ],
   },
   {
     path: "/admin",
     element: <AdminLayout />,
+    loader: adminLoader,
     children: [
       {
         index: true,

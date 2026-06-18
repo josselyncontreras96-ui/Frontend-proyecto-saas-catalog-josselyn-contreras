@@ -48,7 +48,7 @@ function ToolForm({ onCreateTool, tool, onUpdateTool, isSaving }) {
   }, [tool]);
 
   return (
-    <form className="movie-form" onSubmit={handleSubmit}>
+    <form className="tool-form" onSubmit={handleSubmit}>
       <h2>{isEditing ? "Editar herramienta" : "Nueva herramienta"}</h2>
 
       <div className="form-group">
@@ -107,7 +107,7 @@ function ToolForm({ onCreateTool, tool, onUpdateTool, isSaving }) {
         <input type="checkbox" name="featured" id="featured" checked={form.featured} onChange={handleChange} />
       </div>
 
-      <button disabled={isSaving} className="button movie-form-button" type="submit">
+      <button disabled={isSaving} className="button tool-form-button" type="submit">
         {isSaving ? "Guardando..." : "Guardar herramienta"}
       </button>
     </form>

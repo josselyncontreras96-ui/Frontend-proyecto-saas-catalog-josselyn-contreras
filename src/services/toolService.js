@@ -22,6 +22,12 @@ export const getTools = async (search = "") => {
   return handleResponse(response);
 };
 
+export const getToolById = async (toolId) => {
+  const response = await fetch(`${API_URL}/${toolId}`);
+
+  return handleResponse(response);
+};
+
 export const createTool = async (toolData) => {
   const token = getToken();
 

@@ -3,7 +3,7 @@ function Footer() {
     <footer className="site-footer">
       <div className="container">
         <p>Stackly &copy; 2026</p>
-        <p>Proyecto Final - Bootcamp Neoland Web Development</p>
+        <p>Proyecto Final - Josselyn Contreras</p>
       </div>
     </footer>
   );

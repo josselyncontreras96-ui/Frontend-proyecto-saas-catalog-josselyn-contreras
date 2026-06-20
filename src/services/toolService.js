@@ -15,14 +15,9 @@ const handleResponse = async (response) => {
   return data;
 };
 
-export const getTools = async () => {
-  const response = await fetch(API_URL);
-
-  return handleResponse(response);
-};
-
-export const getToolById = async (toolId) => {
-  const response = await fetch(`${API_URL}/${toolId}`);
+export const getTools = async (search = "") => {
+  const url = search ? `${API_URL}?search=${search}` : API_URL;
+  const response = await fetch(url);
 
   return handleResponse(response);
 };

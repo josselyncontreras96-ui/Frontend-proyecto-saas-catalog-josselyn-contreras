@@ -18,7 +18,7 @@ function ToolCard({ tool }) {
   return (
     <article
       className={`tool-card ${tool.featured ? "featured" : ""}`}
-      onClick={() => navigate(`/catalog/${tool.id}`)}
+      onClick={() => navigate(`/catalog/${tool._id}`)}
     >
       <img src={tool.image} alt={tool.name} />
       <div className="tool-card-content">

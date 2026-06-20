@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { tools } from "../data/tools";
+import { useEffect, useState } from "react";
+import { getTools } from "../services/toolService";
 
 function SearchBox() {
   const [search, setSearch] = useState("");
+  const [results, setResults] = useState([]);
 
-  const normalizedSearch = search.toLowerCase().trim();
+  useEffect(() => {
+    if (search.trim() === "") return;
 
-  const results = tools
-    .filter((tool) => {
-      const name = tool.name.toLowerCase();
-      const category = tool.category.toLowerCase();
-      return name.includes(normalizedSearch) || category.includes(normalizedSearch);
-    })
-    .slice(0, 3);
+    const loadTools = async () => {
+      const tools = await getTools(search);
+      setResults(tools.slice(0, 3));
+    };
+
+    loadTools();
+  }, [search]);
 
   return (
     <div className="search-box">
@@ -24,18 +26,21 @@ function SearchBox() {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      {search.trim() !== "" && (
+
+      {search.trim() != "" && (
         <div className="search-box-results">
           {results.length > 0 ? (
             results.map((tool) => (
               <Link
-                key={tool.id}
+                key={tool._id}
                 onClick={() => setSearch("")}
                 className="search-box-result"
-                to={`/catalog/${tool.id}`}
+                to={`/catalog/${tool._id}`}
               >
                 <strong>{tool.name}</strong>
-                <span>{tool.category} • {tool.pricing}</span>
+                <span>
+                  {tool.category} • {tool.pricing}
+                </span>
               </Link>
             ))
           ) : (

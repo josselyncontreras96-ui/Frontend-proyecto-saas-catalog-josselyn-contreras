@@ -160,7 +160,7 @@ en el Local Storage del navegador.
 
 Frontend desplegado en:
 ```txt
-https://melodious-pavlova-0ac120.netlify.app
+https://stackly-app.netlify.app/
 ```
 
 Backend desplegado en:

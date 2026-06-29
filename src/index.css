@@ -60,7 +60,11 @@ img {
   color: #93c5fd;
   font-weight: bold;
 }
-
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f9fafb;
+}
 .hero p {
   max-width: 600px;
   color: #d1d5db;

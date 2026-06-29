@@ -1,4 +1,4 @@
-# Stackly | Catálogo de herramientas SaaS
+# Stackly Frontend
 
 Aplicación web desarrollada con React para consultar, buscar y administrar herramientas SaaS consumiendo una API REST.
 
@@ -14,7 +14,7 @@ Aplicación web desarrollada con React para consultar, buscar y administrar herr
 - Eliminar herramientas
 - Registro de usuarios
 - Inicio de sesión con JWT
-- Rutas protegidas mediante autenticación (loaders de React Router)
+- Rutas protegidas mediante loaders de React Router
 - Testing básico con Vitest
 
 ---
@@ -53,9 +53,9 @@ npm install
 
 ## Variables de entorno
 
-Crear un archivo `.env` en la raíz del proyecto utilizando como referencia el archivo `.env.example`.
+Crear un archivo `.env` en la raíz del proyecto utilizando como referencia el archivo `.env-example`.
 
-### .env.example
+### .env-example
 ```env
 VITE_API_URL=
 ```
@@ -90,6 +90,8 @@ http://localhost:5173
 ```bash
 npm test
 ```
+
+7 tests pasando (Vitest + Testing Library).
 
 ---
 
@@ -139,6 +141,7 @@ src/
 ├── tests/
 │
 ├── App.jsx
+├── index.css
 └── main.jsx
 ```
 
@@ -160,7 +163,7 @@ en el Local Storage del navegador.
 
 Frontend desplegado en:
 ```txt
-https://stackly-app.netlify.app/
+https://stackly-app.netlify.app
 ```
 
 Backend desplegado en:
@@ -173,4 +176,5 @@ https://backend-proyecto-saas-catalog-josselyn.onrender.com
 ## Autor
 
 Proyecto desarrollado como práctica del curso Full Stack de Neoland.
-Autor: Josselyn Contreras
+
+Autora: Josselyn Contreras

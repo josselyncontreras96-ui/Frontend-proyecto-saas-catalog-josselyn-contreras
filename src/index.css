@@ -1,6 +1,4 @@
-Aquí está tu CSS completo con las mejoras de auth integradas, además de un pequeño arreglo: tenías la clase .tool-carousel declarada dos veces (una con display: flex y otra abajo con scrollbar-width) — las uní en una sola para evitar conflictos a futuro.
-css/* reset */
-* {
+ *{
   box-sizing: border-box;
 }
 

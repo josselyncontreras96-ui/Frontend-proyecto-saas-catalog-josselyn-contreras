@@ -20,7 +20,13 @@ function ToolCard({ tool }) {
       className={`tool-card ${tool.featured ? "featured" : ""}`}
       onClick={() => navigate(`/catalog/${tool._id}`)}
     >
-      <img src={tool.image} alt={tool.name} />
+      <img
+        src={tool.image}
+        alt={tool.name}
+        onError={(e) => {
+          e.target.src = "https://placehold.co/300x260/1f2937/9ca3af?text=Sin+imagen";
+        }}
+      />
       <div className="tool-card-content">
         <div className="tool-card-icon">
           {getCategoryIcon(tool.category)}

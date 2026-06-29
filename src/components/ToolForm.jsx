@@ -72,9 +72,9 @@ function ToolForm({ onCreateTool, tool, onUpdateTool, isSaving }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="pricing">Precio:</label>
+        <label htmlFor="pricing">Tipo de licencia:</label>
         <select id="pricing" name="pricing" value={form.pricing} onChange={handleChange}>
-          <option value="">Seleccionar tipo</option>
+          <option value="">Seleccionar modelo</option>
           <option value="Gratis">Gratis</option>
           <option value="Freemium">Freemium</option>
           <option value="De pago">De pago</option>

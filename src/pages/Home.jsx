@@ -46,8 +46,8 @@ function Home() {
           <span className="hero-label">Proyecto final</span>
           <h1>Catálogo de herramientas SaaS</h1>
           <p>
-            Descubre y compara las mejores herramientas SaaS empresariales.
-            Deja que la IA te recomiende la más adecuada para tu negocio.
+           Descubre y compara herramientas SaaS para diferentes categorías.
+           Consulta sus características, precios y enlaces oficiales en un solo lugar.
           </p>
           <Link className="button" to="/catalog">
             Ver catálogo

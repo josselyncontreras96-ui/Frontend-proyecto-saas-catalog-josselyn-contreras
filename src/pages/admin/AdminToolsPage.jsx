@@ -125,15 +125,15 @@ function AdminToolsPage() {
           <p>Listado interno de herramientas SaaS.</p>
         </div>
         <button
-          className="admin-create-button"
-          type="button"
-          onClick={() => {
-            setShowForm(!showForm);
-            setSelectedTool(null);
-          }}
-        >
-          {showForm ? "Cerrar formulario" : "Nueva herramienta"}
-        </button>
+        className={`admin-toggle-button ${showForm ? "close" : ""}`}
+        type="button"
+        onClick={() => {
+         setShowForm(!showForm);
+           setSelectedTool(null);
+  }}
+>
+  {showForm ? "Cerrar formulario" : "Nueva herramienta"}
+</button>
       </div>
 
       {showForm && (

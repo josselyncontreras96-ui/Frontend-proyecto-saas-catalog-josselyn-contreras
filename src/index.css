@@ -28,9 +28,9 @@ img {
 .site-header {
   top: 0;
   position: sticky;
-  opacity: 0.7;
   background-color: #020617;
   border-bottom: 1px solid #1f2937;
+  z-index: 50;
 }
 
 .header-content {
@@ -52,7 +52,7 @@ img {
 }
 
 .hero {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
 }
 
 .hero-label {
@@ -89,7 +89,6 @@ img {
   margin: 4px 0;
 }
 
-/* Tool Styles */
 
 .featured-section,
 .latest-section {
@@ -143,8 +142,35 @@ img {
   color: #93c5fd;
   font-weight: bold;
 }
+.tool-carousel-section {
+  padding: 24px 0;
+}
 
-/* Catalog Section */
+.tool-carousel-header {
+  margin-bottom: 20px;
+}
+
+.tool-carousel-header h2 {
+  margin: 0 0 6px;
+}
+
+.tool-carousel-header span {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.tool-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+}
+
+.tool-carousel-item {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
 
 .catalog-section {
   padding: 40px 0 80px;
@@ -201,7 +227,6 @@ img {
   font-size: 1rem;
 }
 
-/* Tool Detail */
 
 .tool-detail {
   display: grid;
@@ -223,7 +248,6 @@ img {
   line-height: 1.5;
 }
 
-/* Admin styles */
 
 .admin-section {
   padding: 40px 0 80px;
@@ -287,7 +311,6 @@ img {
   margin-bottom: 24px;
 }
 
-/* Media queries */
 
 @media (min-width: 768px) {
   .tool-filters {
@@ -410,7 +433,6 @@ nav a.active {
   font-size: 13px;
   color: #9ca3af;
 }
-/* Form styles */
 .tool-form {
   background-color: #1f2937;
   border: 1px solid #374151;
